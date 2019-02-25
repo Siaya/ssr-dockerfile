@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update -y 
+RUN apk update 
 RUN apk add py-pip
 RUN pip install --upgrade pip
 RUN pip install shadowsocks
