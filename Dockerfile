@@ -1,8 +1,8 @@
 FROM alpine:latest
 
-RUN apk update -y && \
-    apk add py-pip && \
-    pip install --upgrade pip && \
-    pip install shadowsocks
+RUN apk update -y 
+RUN apk add py-pip
+RUN pip install --upgrade pip
+RUN pip install shadowsocks
 
 ENTRYPOINT ["/usr/bin/ssserver","--log-file=/var/log/shadowsocks.log"]
